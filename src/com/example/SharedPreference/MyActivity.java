@@ -98,23 +98,41 @@ public class MyActivity extends Activity {
         String c = city.getText().toString();
         SharedPreferences.Editor editor = preference.edit();
         if (n.equals(""))
+        {
             name.setHint("name required");
+            name.setHintTextColor(getResources().getColor(android.R.color.holo_red_dark));
+        }
         else
+
             editor.putString("nameKey", n);
         if (p.equals(""))
+        {
             phone.setHint("phone required");
+            phone.setHintTextColor(getResources().getColor(android.R.color.holo_red_dark));
+        }
         else
             editor.putString("phoneKey", p);
         if (s.equals(""))
+        {
             street.setHint("street required");
+            street.setHintTextColor(getResources().getColor(android.R.color.holo_red_dark));
+        }
         else
             editor.putString("streetKey", s);
         if (e.equals(""))
+        {
             email.setHint("Email Required");
+            email.setHintTextColor(getResources().getColor(android.R.color.holo_red_dark));
+        }
+
         else
             editor.putString("emailKey", e);
         if (c.equals(""))
+        {
             city.setHint("country required");
+            city.setHintTextColor(getResources().getColor(android.R.color.holo_red_dark));
+
+        }
         else
             editor.putString("cityKey", c);
         if((!n.equals("") && !p.equals("") && !s.equals("") && !e.equals("") && !c.equals("")) )
