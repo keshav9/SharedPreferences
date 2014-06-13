@@ -117,9 +117,11 @@ public class MyActivity extends Activity {
             city.setHint("country required");
         else
             editor.putString("cityKey", c);
-        editor.commit();
         if((!n.equals("") && !p.equals("") && !s.equals("") && !e.equals("") && !c.equals("")) )
+        {
         Toast.makeText(getApplicationContext(),"added successfully",Toast.LENGTH_SHORT).show();
+            editor.commit();
+        }
 
     }
 
